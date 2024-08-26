@@ -11,6 +11,11 @@ spring:
     url: jdbc:mysql://localhost:3306/payment_demo?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+    mybatis-plus:
+      configuration: #sql日志
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+      mapper-locations: classpath:com/gaoyj/paymentdemo/mapper/xml/*.xml
+
 # 服务端口
 server:
   port: 8090
